@@ -38,6 +38,22 @@ files = [
 ]
 
 [[package]]
+name = "attrs"
+version = "18.2.0"
+description = "Classes Without Boilerplate"
+optional = false
+python-versions = "*"
+files = [
+    {file = "attrs-18.2.0-py2.py3-none-any.whl", hash = "sha256:ca4be454458f9dec299268d472aaa5a11f67a4ff70093396e1ceae9c76cf4bbb"},
+    {file = "attrs-18.2.0.tar.gz", hash = "sha256:10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69"},
+]
+
+[package.extras]
+dev = ["coverage", "hypothesis", "pre-commit", "pympler", "pytest", "six", "sphinx", "zope.interface", "zope.interface"]
+docs = ["sphinx", "zope.interface"]
+tests = ["coverage", "hypothesis", "pympler", "pytest", "six", "zope.interface"]
+
+[[package]]
 name = "blinker"
 version = "1.8.2"
 description = "Fast, simple object-to-object and broadcast signaling"
@@ -46,6 +62,17 @@ python-versions = ">=3.8"
 files = [
     {file = "blinker-1.8.2-py3-none-any.whl", hash = "sha256:1779309f71bf239144b9399d06ae925637cf6634cf6bd131104184531bf67c01"},
     {file = "blinker-1.8.2.tar.gz", hash = "sha256:8f77b09d3bf7c795e969e9486f39c2c5e9c39d4ee07424be2bc594ece9642d83"},
+]
+
+[[package]]
+name = "chardet"
+version = "5.2.0"
+description = "Universal encoding detector for Python 3"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "chardet-5.2.0-py3-none-any.whl", hash = "sha256:e1cf59446890a00105fe7b7912492ea04b6e6f06d4b742b2c788469e34c82970"},
+    {file = "chardet-5.2.0.tar.gz", hash = "sha256:1b3b6ff479a8c414bc3fa2c0852995695c4a026dcd6d0633b2dd092ca39c1cf7"},
 ]
 
 [[package]]
@@ -143,6 +170,16 @@ wtforms = "*"
 
 [package.extras]
 email = ["email-validator"]
+
+[[package]]
+name = "fpdf"
+version = "1.7.2"
+description = "Simple PDF generation for Python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "fpdf-1.7.2.tar.gz", hash = "sha256:125840783289e7d12552b1e86ab692c37322e7a65b96a99e0ea86cca041b6779"},
+]
 
 [[package]]
 name = "itsdangerous"
@@ -400,6 +437,20 @@ files = [
 ]
 
 [[package]]
+name = "pdflatex"
+version = "0.1.3"
+description = "Simple wrapper to calling pdflatex"
+optional = false
+python-versions = ">=3.6,<4.0"
+files = [
+    {file = "pdflatex-0.1.3-py3-none-any.whl", hash = "sha256:0e22bf240dd2dc2dd348686e5d259ff00af9ccc8bb1db481c38d03f29184e56e"},
+    {file = "pdflatex-0.1.3.tar.gz", hash = "sha256:b8109ff5a5b813e15d6a9e05b4c4c1ae3893b407ad1f8567ef5b89ec37a7aed5"},
+]
+
+[package.dependencies]
+attrs = ">=18.2,<19.0"
+
+[[package]]
 name = "pillow"
 version = "10.4.0"
 description = "Python Imaging Library (Fork)"
@@ -497,6 +548,17 @@ typing = ["typing-extensions"]
 xmp = ["defusedxml"]
 
 [[package]]
+name = "pypandoc"
+version = "1.13"
+description = "Thin wrapper for pandoc."
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "pypandoc-1.13-py3-none-any.whl", hash = "sha256:4c7d71bf2f1ed122aac287113b5c4d537a33bbc3c1df5aed11a7d4a7ac074681"},
+    {file = "pypandoc-1.13.tar.gz", hash = "sha256:31652073c7960c2b03570bd1e94f602ca9bc3e70099df5ead4cea98ff5151c1e"},
+]
+
+[[package]]
 name = "pywin32"
 version = "306"
 description = "Python for Window Extensions"
@@ -518,6 +580,26 @@ files = [
     {file = "pywin32-306-cp39-cp39-win32.whl", hash = "sha256:e25fd5b485b55ac9c057f67d94bc203f3f6595078d1fb3b458c9c28b7153a802"},
     {file = "pywin32-306-cp39-cp39-win_amd64.whl", hash = "sha256:39b61c15272833b5c329a2989999dcae836b1eed650252ab1b7bfbe1d59f30f4"},
 ]
+
+[[package]]
+name = "reportlab"
+version = "4.2.2"
+description = "The Reportlab Toolkit"
+optional = false
+python-versions = "<4,>=3.7"
+files = [
+    {file = "reportlab-4.2.2-py3-none-any.whl", hash = "sha256:927616931637e2f13e2ee3b3b6316d7a07803170e258621cff7d138bde17fbb5"},
+    {file = "reportlab-4.2.2.tar.gz", hash = "sha256:765eecbdd68491c56947e29c38b8b69b834ee5dbbdd2fb7409f08ebdebf04428"},
+]
+
+[package.dependencies]
+chardet = "*"
+pillow = ">=9.0.0"
+
+[package.extras]
+accel = ["rl-accel (>=0.9.0,<1.1)"]
+pycairo = ["freetype-py (>=2.3.0,<2.4)", "rlPyCairo (>=0.2.0,<1)"]
+renderpm = ["rl-renderPM (>=4.0.3,<4.1)"]
 
 [[package]]
 name = "tqdm"
@@ -576,4 +658,4 @@ email = ["email-validator"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.12"
-content-hash = "107ee60c9aedfc7f08d775a2d809d7a06b36daf365bb532f771ca3a75815f1d8"
+content-hash = "15c2e81b4a07f219ca8bc02b86e333f4dd9b9d9746fa096ce6c7487a0d4eb1bf"
